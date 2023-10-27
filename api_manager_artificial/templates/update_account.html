@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+Account Management
+{% endblock %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert alert-danger">
+            {{ messages[0] }}
+        </div>
+    {% endif %}
+{% endwith %}
+
+{% block content %}
+<h2>Manage Your Account</h2>
+
+<!-- Navigation sub-bar -->
+<div class="sub-bar">
+    <ul class="sub-nav">
+        <li><a href="{{ url_for('account_home', user_id=session.get('user_id')) }}">Account</a></li>
+        <li><a href="{{ url_for('update_account', user_id=session.get('user_id')) }}">Account Modify</a></li>
+        <li><a href="{{ url_for('alerts_hub', user_id=session.get('user_id')) }}">Alert Hub</a></li>
+    </ul>
+</div>
+
+
+<form action="{{ url_for('update_account', user_id=user_id) }}" method="post">
+    Password: <input type="password" name="new_password" value="{{ current_password }}"><br>
+    Tables: <input type="text" name="new_tables" value="{{ current_tables }}"><br>
+    <input type="submit" value="Update">
+</form>
+
+{% endblock %}

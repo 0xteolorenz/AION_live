@@ -1,0 +1,11 @@
+python-box==7.1.1
+pytest-shutil==1.7.0
+flask==2.3.2
+flask_sqlalchemy==3.0.3
+flask_socketio==5.3.4
+Werkzeug==2.3.3
+sqlalchemy==2.0.16
+sqlalchemy.orm==1.2.10
+pandas
+numpy
+ccxt==3.0.51

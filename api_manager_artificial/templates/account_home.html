@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Account Home
+{% endblock %}
+
+{% block content %}
+<h2>Account Home</h2>
+
+<!-- Navigation sub-bar -->
+<div class="sub-bar">
+    <ul class="sub-nav">
+        <li><a href="{{ url_for('account_home', user_id=session.get('user_id')) }}">Account</a></li>
+        <li><a href="{{ url_for('update_account', user_id=session.get('user_id')) }}">Account Modify</a></li>
+        <li><a href="{{ url_for('alerts_hub', user_id=session.get('user_id')) }}">Alert Hub</a></li>
+    </ul>
+</div>
+
+<!-- Content for the Account Home page -->
+<p>Welcome to your account home page. Here you can access various features and settings for your account.</p>
+{% endblock %}

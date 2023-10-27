@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+Alert Hub
+{% endblock %}
+
+{% block content %}
+<h2>Alert Hub</h2>
+
+<!-- Navigation sub-bar -->
+<div class="sub-bar">
+    <ul class="sub-nav">
+        <li><a href="{{ url_for('account_home', user_id=session.get('user_id')) }}">Account</a></li>
+        <li><a href="{{ url_for('update_account', user_id=session.get('user_id')) }}">Account Modify</a></li>
+        <li><a href="{{ url_for('alerts_hub', user_id=session.get('user_id')) }}">Alert Hub</a></li>
+    </ul>
+</div>
+
+<!-- Display the webhook data -->
+<div id="webhook-data">
+    {% for webhook in webhook_data %}
+    <pre>{{ webhook|tojson(indent=2) }}</pre>
+    {% endfor %}
+</div>
+{% endblock %}
+

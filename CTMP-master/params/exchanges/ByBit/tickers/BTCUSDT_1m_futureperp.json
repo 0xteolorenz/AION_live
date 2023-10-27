@@ -1,0 +1,18 @@
+{   
+    "asset": "BTC",
+    "asset_ref": "USDT",
+    "ticker_interval": "1m",
+    "asset_type": "futureperp",
+    "start_date": 
+        {
+            "day": 10,
+            "month": 7,
+            "year": 2023
+        },
+    "end_date": 
+        {
+            "day": 1,
+            "month": 1,
+            "year": 2030
+        }
+}

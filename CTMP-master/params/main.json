@@ -1,0 +1,11 @@
+{
+    "tickers": 
+    [
+        "Binance_spot_BTC_USDT_1h",
+        "Binance_spot_ETH_USDT_1h",
+        "ByBit_futureperp_ETH_USDT_1h",
+        "ByBit_futureperp_BTC_USDT_1h",
+        "ByBit_futureperp_ETH_USDT_1m",
+        "ByBit_futureperp_BTC_USDT_1m"
+    ]
+}

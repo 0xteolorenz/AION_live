@@ -1,0 +1,81 @@
+{   
+    "algorithm_name": "algo1",
+    "asset": "BTC",
+    "asset_ref": "USDT",
+    "ticker_interval": "1h",
+    "exchange": "Binance",
+    "type": "spot",
+    "tr_fees_oc": 0.07,
+    "tr_fees_tp": 0.07,
+    "funding_fees": 0.0,
+    "parameters": 
+        {
+            "fund_weight": 
+                {   
+                    "value": 1.0,
+                    "set_range_percent": false,
+                    "subsets": [],
+                    "range_perc": 0.0,
+                    "min_value": 0.2, 
+                    "max_value": 0.7
+                },
+            "price_filter": 
+                {   
+                    "value": "close",
+                    "set_range_percent": null,
+                    "subsets": [],
+                    "range_perc": null,
+                    "min_value": null, 
+                    "max_value": null
+                },
+            "period_slowMA": 
+                {   
+                    "value": 50,
+                    "set_range_percent": false,
+                    "subsets": ["position"],
+                    "range_perc": 0.0,
+                    "min_value": 5, 
+                    "max_value": 100
+                },
+            "period_fastMA": 
+                {   
+                    "value": 21,
+                    "set_range_percent": false,
+                    "subsets": ["position"],
+                    "range_perc": 0.0,
+                    "min_value": 2, 
+                    "max_value": 40
+                },
+            "sl_long": 
+                {   
+                    "value": 10.6,
+                    "set_range_percent": false,
+                    "subsets": ["position"],
+                    "range_perc": 0.0,
+                    "min_value": 1.0, 
+                    "max_value": 20.0
+                },
+            "sl_short": 
+                {   
+                    "value": 0,
+                    "set_range_percent": false,
+                    "subsets": [],
+                    "range_perc": 0.0,
+                    "min_value": 1.0, 
+                    "max_value": 20.0
+                },
+            "param_noise_factor": 
+                {   
+                    "value": 0.001,
+                    "set_range_percent": false,
+                    "subsets": [],
+                    "range_perc": 0.0,
+                    "min_value": 0.0, 
+                    "max_value": 5.0
+                }
+        },
+    "genetic_algorithm":
+        {
+           "subsets_to_run": ["position"]
+        }
+}
